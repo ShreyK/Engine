@@ -26,6 +26,7 @@ public class Game extends Canvas implements Runnable {
 
 	public Thread thread;
 	public JFrame frame;
+	public InputHandler input;
 	public static Game game;
 
 	public boolean running = false;
@@ -35,6 +36,7 @@ public class Game extends Canvas implements Runnable {
 	public void init() {
 		game = this;
 		running = true;
+		input = new InputHandler(game);
 	}
 
 	public synchronized void start() {
